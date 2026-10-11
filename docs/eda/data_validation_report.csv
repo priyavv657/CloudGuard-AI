@@ -1,0 +1,10 @@
+Check,Result
+Total observations,79200
+Number of series,5
+Missing values,0
+Duplicate rows,0
+Duplicate series-timestamp pairs,0
+Invalid labels,0
+Non-finite values,0
+Negative values,0
+Timestamps ordered within each series,PASS

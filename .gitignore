@@ -1,2 +1,15 @@
-
 temp-dataset/
+venv/
+venv312/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.py[cod]
+.pytest_cache/
+.env
+.idea/
+mlruns/
+mlflow.db
+.mlflow/

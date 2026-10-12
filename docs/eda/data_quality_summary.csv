@@ -1,0 +1,2 @@
+total_observations,number_of_series,normal_observations,anomalous_observations,anomaly_percentage,missing_values,minimum_value,maximum_value,mean_value,median_value
+79200,5,78111,1089,1.375,0,0.0,3081259.55,561164.1349046718,292314.38333333354

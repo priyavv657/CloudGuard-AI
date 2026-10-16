@@ -9,5 +9,11 @@ pipeline {
         stage('Archive Model') { steps { archiveArtifacts artifacts: 'models/*', fingerprint: true } }
         stage('Deploy') { steps { echo 'Merge to main -> Streamlit Community Cloud redeploys automatically' } }
     }
-    post { success { echo 'Build SUCCESS' } failure { echo 'Build FAILED' } }
-}
+     post {
+        success {
+            echo 'Build SUCCESS'
+        }
+        failure {
+            echo 'Build FAILED'
+        }
+    }

@@ -1,0 +1,20 @@
+Summary,Issue Type,Priority,Labels,Description
+Set up Jira project and Scrum board,Story,High,sprint1,"Create project, board, sprints, assign members"
+Create GitHub repo and branching strategy,Story,High,sprint1,"main/dev/feature branches, PR workflow"
+Select dataset and clean 5 ingress-rate series,Story,High,sprint1,"Combine, clean and validate; Label column"
+Store cleaned data as Parquet,Story,Medium,sprint1,data/processed/ingress_cleaned.parquet
+Exploratory data analysis,Story,Medium,sprint1,EDA charts and summary CSVs in docs/eda
+Train Isolation Forest,Story,High,sprint2,Tune n_estimators and contamination
+Train Local Outlier Factor,Story,High,sprint2,Tune n_neighbors and contamination
+Train One-Class SVM,Story,High,sprint2,Tune nu
+Log experiments to MLflow,Story,High,sprint2,"Params, F1, precision, recall, model artifacts"
+Register best model in MLflow registry,Story,Medium,sprint2,cloudguard-anomaly-detector
+Build Streamlit dashboard,Story,High,sprint3,Metrics cards and anomaly chart
+"Build upload, results and comparison pages",Story,Medium,sprint3,"CSV upload, anomaly table, model comparison"
+Deploy app on Streamlit Community Cloud,Story,High,sprint3,"Connect GitHub repo, public link"
+Write Jenkinsfile and configure Jenkins job,Story,High,sprint4,"Install, test, train, archive"
+Configure GitHub webhook or Poll SCM,Story,Medium,sprint4,Auto-trigger builds on push
+Write pytest unit and integration tests,Story,High,sprint4,tests/test_cloudguard.py
+Log defects found during testing,Bug,Low,sprint4,Track bugs in Jira
+Complete project report,Story,High,sprint4,"All chapters, screenshots, references"
+Prepare final demo,Story,Medium,sprint4,"MLflow UI, app, Jira, Jenkins"

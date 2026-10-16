@@ -11,25 +11,27 @@ pipeline {
 
         stage('Install') {
             steps {
-                bat 'python -m venv venv && venv\\Scripts\\pip install -r requirements-dev.txt'
+                bat '"C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" -m venv venv'
+                bat 'venv\\Scripts\\python.exe -m pip install --upgrade pip'
+                bat 'venv\\Scripts\\python.exe -m pip install -r requirements-dev.txt'
             }
         }
 
         stage('Validate Data') {
             steps {
-                bat 'venv\\Scripts\\python src\\data_validation.py'
+                bat 'venv\\Scripts\\python.exe src\\data_validation.py'
             }
         }
 
         stage('Test') {
             steps {
-                bat 'venv\\Scripts\\python -m pytest tests -v'
+                bat 'venv\\Scripts\\python.exe -m pytest tests -v'
             }
         }
 
         stage('Train + MLflow') {
             steps {
-                bat 'venv\\Scripts\\python src\\train.py'
+                bat 'venv\\Scripts\\python.exe src\\train.py'
             }
         }
 
@@ -41,7 +43,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                echo 'Merge to main -> Streamlit Community Cloud redeploys automatically'
+                echo 'Deployment is handled separately through Streamlit Community Cloud.'
             }
         }
     }
